@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated search bar</title>
+</head>
+
+<body>
+    <div class="searchBar">
+
+        <div class="search">
+            <ion-icon name="search-outline"></ion-icon>
+        </div>
+
+        <div class="searchInput">
+            <input type="text" placeholder="Search here">
+        </div>
+
+        <div class="close">
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+        
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let search = document.querySelector('.search');
+        let close = document.querySelector('.close');
+        let searchBar = document.querySelector('.searchBar');
+        search.onclick = function(){
+            searchBar.classList.add('active');
+        }
+        close.onclick = function(){
+            searchBar.classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
